@@ -11,7 +11,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 - [x] (5pts) User can tap a tab bar button to view a grid layout of Movie Posters using a CollectionView.
 
 #### BONUS
-- [ ] (2pts) User can tap a poster in the collection view to see a detail screen of that movie.
+- [] (2pts) User can tap a poster in the collection view to see a detail screen of that movie.
 - [ ] (2pts) In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer.
 
 ### App Walkthough GIF
@@ -33,12 +33,12 @@ This was fairly easy as I am getting more used to how things work.
 - [x] (3pts) User can view the movie poster image for each movie.
 
 #### BONUS
-- [ ] (2pt) User can view the app on various device sizes and orientations.
+- [x] (2pt) User can view the app on various device sizes and orientations.
 - [ ] (1pt) Run your app on a real device.
 
 ### App Walkthough GIF
 
-<img src="http://g.recordit.co/vt2KAmdSOR.gif" width=250><br>
+<img src="http://g.recordit.co/hrKzLzubnX.gif" width=250><br>
 
 ### Notes
 Adjusting to XCode. Was stuck for a bit when the TableView did not display fully, but issue was resolved after i changed the simulator to iPhone 8. Also, I thought the scrolling feature was having issues, turns out it was because i could not use my fingers on my macbook's trackpad to scroll. I had to actually click and drag to scroll.
