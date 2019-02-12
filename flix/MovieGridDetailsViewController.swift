@@ -1,45 +1,42 @@
 //
-//  MovieDetailsViewController.swift
+//  MovieGridDetailsViewController.swift
 //  flix
 //
-//  Created by Russell Wong on 2/9/19.
+//  Created by Russell Wong on 2/11/19.
 //  Copyright © 2019 Russell Wong. All rights reserved.
 //
 
 import UIKit
-import AlamofireImage
 
-class MovieDetailsViewController: UIViewController {
+class MovieGridDetailsViewController: UIViewController {
     
+    @IBOutlet weak var backdropGridView: UIImageView!
+    @IBOutlet weak var posterGridView: UIImageView!
+    @IBOutlet weak var titleGridLabel: UILabel!
+    @IBOutlet weak var synopsisGridLabel: UILabel!
     
-    @IBOutlet weak var backdropView: UIImageView!
-    @IBOutlet weak var posterView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var synopsisLabel: UILabel!
-    
-    var movie: [String:Any]!
+    var movieDetail: [String:Any]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        titleGridLabel.text = movieDetail["title"] as? String
+        titleGridLabel.sizeToFit()
         
-        titleLabel.text = movie["title"] as? String
-        titleLabel.sizeToFit()
-        
-        synopsisLabel.text = movie["overview"] as? String
-        synopsisLabel.sizeToFit()
+        synopsisGridLabel.text = movieDetail["overview"] as? String
+        synopsisGridLabel.sizeToFit()
         
         let baseUrl = "https://image.tmdb.org/t/p/w185"
-        let posterPath = movie["poster_path"] as! String
+        let posterPath = movieDetail["poster_path"] as! String
         let posterUrl = URL(string: baseUrl + posterPath)
         
-        posterView.af_setImage(withURL: posterUrl!)
+        posterGridView.af_setImage(withURL: posterUrl!)
         
-        let backdropPath = movie["backdrop_path"] as! String
+        let backdropPath = movieDetail["backdrop_path"] as! String
         let backdropUrl = URL(string: "https://image.tmdb.org/t/p/w780" + backdropPath)
         
-        backdropView.af_setImage(withURL: backdropUrl!)
+        backdropGridView.af_setImage(withURL: backdropUrl!)
     }
     
 
